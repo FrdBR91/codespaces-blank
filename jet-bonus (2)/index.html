@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jet Bonus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Barra de rolagem personalizada para melhor estética (opcional) */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; /* Fundo claro para tema claro */
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c1c1c1; /* Thumb mais claro */
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a1a1a1; /* Thumb um pouco mais escuro ao passar o mouse */
+    }
+    /* body {
+      background-color: #f8f9fa;  Retirado para aplicar gradiente via Tailwind 
+    } */
+
+    /* Animação de introdução */
+    @keyframes intro-animation {
+      0% { 
+        opacity: 0; 
+        transform: rotate(-180deg) scale(0.5); 
+      }
+      37.5% { /* aos 1.5s de 4s */
+        opacity: 1; 
+        transform: rotate(0deg) scale(1); 
+      }
+      62.5% { /* aos 2.5s de 4s (1.5s + 1s de hold) */
+        opacity: 1; 
+        transform: rotate(0deg) scale(1); 
+      }
+      100% { 
+        opacity: 0; 
+        transform: rotate(180deg) scale(0.5); 
+      }
+    }
+    .animate-intro {
+      animation: intro-animation 4s ease-in-out forwards;
+    }
+
+    /* Animação de fade-in para o conteúdo principal */
+    @keyframes main-content-fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .animate-main-fade-in {
+      animation: main-content-fade-in 0.5s ease-out forwards;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/"
+  }
+}
+</script>
+</head>
+<body class="text-slate-800 min-h-screen flex items-center justify-center p-4 font-sans bg-gradient-to-br from-slate-100 to-slate-200">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>

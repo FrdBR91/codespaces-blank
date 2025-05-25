@@ -1,0 +1,6 @@
+{
+  "name": "Jet Bonus",
+  "description": "An application for clients to retrieve Jet bonus codes by entering their phone number. Bonus codes are sourced from a Google Sheet.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
